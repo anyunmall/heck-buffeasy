@@ -30,7 +30,7 @@ while True:
       s=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
       s.connect((ip, port))
       s.recv(1024)
-      print("Fuzzing with {} bytes".format(len(string) - len(prefix)))
+      print("Fuzzing with {} bytes".format(len(Buffer)))
       s.send(bytes(Buffer, "latin-1"))
       s.recv(1024)
   except:
