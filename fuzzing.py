@@ -34,7 +34,7 @@ while True:
       s.send(bytes(Buffer, "latin-1"))
       s.recv(1024)
   except:
-    print("Fuzzing crashed at {} bytes".format(len(string) - len(prefix)))
+    print("Fuzzing crashed at {} bytes".format(len(Buffer)))
     sys.exit(0)
   Buffer += 100 * "A"
   time.sleep(1)
