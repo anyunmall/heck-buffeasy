@@ -21,7 +21,7 @@
 import socket,sys,time
 
 ip = ""
-port = ""
+port = 
 prefix = ""
 Buffer = prefix + "A" * 100
 
@@ -36,5 +36,5 @@ while True:
   except:
     print("Fuzzing crashed at {} bytes".format(len(string) - len(prefix)))
     sys.exit(0)
-  string += 100 * "A"
+  Buffer += 100 * "A"
   time.sleep(1)
